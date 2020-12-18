@@ -1,6 +1,8 @@
 require('dotenv').config();
 const { SlashCreator, ExpressServer } = require('slash-create');
 const path = require('path');
+const CatLoggr = require('cat-loggr');
+const logger = new CatLoggr().setLevel(process.env.COMMANDS_DEBUG === 'true' ? 'debug' : 'info');
 
 const creator = new SlashCreator({
   applicationID: process.env.DISCORD_APP_ID,
@@ -9,18 +11,19 @@ const creator = new SlashCreator({
   serverPort: 8020
 });
 
-creator.on('debug', (message) => console.log('debug:', message));
-creator.on('warn', (message) => console.warn('warn:', message));
-creator.on('error', (error) => console.error('error:', error));
+creator.on('debug', (message) => logger.log(message));
+creator.on('warn', (message) => logger.warn(message));
+creator.on('error', (error) => logger.error(error));
+creator.on('synced', () => logger.info('Commands synced!'));
+creator.on('commandRan', (command, _, ctx) =>
+  logger.info(`${ctx.member.user.username}#${ctx.member.user.discriminator} (${ctx.member.id}) ran command ${command.commandName}`));
+creator.on('commandRegister', (command) =>
+  logger.info(`Registered command ${command.commandName}`));
 
 creator
   .withServer(new ExpressServer())
   .registerCommandsIn(path.join(__dirname, 'commands'))
   .syncCommands()
   .startServer();
-
-setTimeout(() => {
-  console.log(require('require-all')(path.join(__dirname, 'commands')))
-}, 5000)
 
 // This should serve in localhost:8020/interactions
