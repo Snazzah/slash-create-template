@@ -14,10 +14,10 @@ creator.on('warn', (message) => console.warn('warn:', message));
 creator.on('error', (error) => console.error('error:', error));
 
 creator
-    .withServer(new ExpressServer())
-    .registerCommandsIn(path.join(__dirname, 'commands'))
-    .syncCommands()
-    .startServer();
+  .withServer(new ExpressServer())
+  .registerCommandsIn(path.join(__dirname, 'commands'))
+  .syncCommands()
+  .startServer();
 
 setTimeout(() => {
   console.log(require('require-all')(path.join(__dirname, 'commands')))

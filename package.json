@@ -10,5 +10,11 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "slash-create": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1"
   }
 }
