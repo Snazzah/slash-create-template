@@ -15,7 +15,7 @@ creator.on('debug', (message) => logger.log(message));
 creator.on('warn', (message) => logger.warn(message));
 creator.on('error', (error) => logger.error(error));
 creator.on('synced', () => logger.info('Commands synced!'));
-creator.on('commandRan', (command, _, ctx) =>
+creator.on('commandRun', (command, _, ctx) =>
   logger.info(`${ctx.member.user.username}#${ctx.member.user.discriminator} (${ctx.member.id}) ran command ${command.commandName}`));
 creator.on('commandRegister', (command) =>
   logger.info(`Registered command ${command.commandName}`));
