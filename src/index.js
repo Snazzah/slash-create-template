@@ -19,6 +19,7 @@ creator.on('commandRan', (command, _, ctx) =>
   logger.info(`${ctx.member.user.username}#${ctx.member.user.discriminator} (${ctx.member.id}) ran command ${command.commandName}`));
 creator.on('commandRegister', (command) =>
   logger.info(`Registered command ${command.commandName}`));
+creator.on('commandError', (command, error) => logger.error(`Command ${command.commandName}:`, error));
 
 creator
   .withServer(new FastifyServer())
