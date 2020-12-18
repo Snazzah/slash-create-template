@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { SlashCreator, ExpressServer } = require('slash-create');
+const { SlashCreator, FastifyServer } = require('slash-create');
 const path = require('path');
 const CatLoggr = require('cat-loggr');
 const logger = new CatLoggr().setLevel(process.env.COMMANDS_DEBUG === 'true' ? 'debug' : 'info');
@@ -21,7 +21,7 @@ creator.on('commandRegister', (command) =>
   logger.info(`Registered command ${command.commandName}`));
 
 creator
-  .withServer(new ExpressServer())
+  .withServer(new FastifyServer())
   .registerCommandsIn(path.join(__dirname, 'commands'))
   .syncCommands()
   .startServer();

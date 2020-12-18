@@ -9,7 +9,7 @@
   "dependencies": {
     "cat-loggr": "^1.1.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "fastify": "^3.9.2",
     "slash-create": "^1.1.0"
   },
   "devDependencies": {
