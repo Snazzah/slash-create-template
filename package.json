@@ -10,7 +10,7 @@
     "cat-loggr": "^1.1.0",
     "dotenv": "^8.2.0",
     "fastify": "^3.9.2",
-    "slash-create": "^1.1.6"
+    "slash-create": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^7.15.0",
