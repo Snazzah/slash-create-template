@@ -2,17 +2,20 @@
 This templates helps you in creating slash commands from a webserver.
 
 ## Installation
-1. Install dependencies
 ```sh
-npm i -g yarn # if you don't have it already
-yarn install
+npx degit Snazzah/slash-create-template slash-commands
+cd slash-commands
+npm i -g yarn
+yarn
+cp .env.example .env # this copies the .env file, edit variables in this file!
+# Create and edit commands in the `commands` folder
+yarn start
 ```
-2. Copy over `.env.example` into `.env` and fill in the variables.
-3. Create any more commands you want.
-4. `yarn start`
 
 ### Using PM2
-1. `npm i -g pm2`
-2. Follow the first, second and third step above
-3. `pm2 start pm2.json`
-4. (recommended) `pm2 dump`
+```sh
+npm i -g pm2
+# Follow the installation process above
+pm2 start pm2.json
+pm2 dump # recommended
+```
