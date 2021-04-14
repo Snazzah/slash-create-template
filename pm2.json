@@ -3,7 +3,7 @@
     {
       "name": "slash-commands",
 			"script": "node",
-			"args": "src/index.js"
+			"args": "dist/index.js"
     }
   ]
 }

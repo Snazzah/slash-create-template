@@ -1,14 +1,15 @@
 # slash-create-template
-This templates helps you in creating slash commands from a webserver.
+This templates helps you in creating slash commands in TypeScript from a webserver.
 
 ## Installation
 ```sh
-npx degit Snazzah/slash-create-template slash-commands
+npx degit Snazzah/slash-create-template#typescript slash-commands
 cd slash-commands
 npm i -g yarn
 yarn
 cp .env.example .env # this copies the .env file, edit variables in this file!
 # Create and edit commands in the `commands` folder
+yarn build
 yarn start
 ```
 

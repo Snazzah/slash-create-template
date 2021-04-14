@@ -12,3 +12,4 @@ logs/
 .vscode/**/*
 !.vscode/extensions.json
 .env
+dist/

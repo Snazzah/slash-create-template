@@ -2,9 +2,12 @@
   "name": "slash-create-template",
   "version": "1.0.0",
   "description": "A template for slash-create",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "cd dist && node index.js",
+    "build": "npx tsc",
+    "lint": "npx eslint --ext .ts ./src",
+    "lint:fix": "npx eslint --ext .ts ./src --fix"
   },
   "dependencies": {
     "cat-loggr": "^1.1.0",
@@ -13,9 +16,15 @@
     "slash-create": "^3.0.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.3.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
   }
 }
