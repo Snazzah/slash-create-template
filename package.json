@@ -13,7 +13,7 @@
     "cat-loggr": "^1.1.0",
     "dotenv": "^8.2.0",
     "fastify": "^3.9.2",
-    "slash-create": "^3.0.1"
+    "slash-create": "^4.0.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
