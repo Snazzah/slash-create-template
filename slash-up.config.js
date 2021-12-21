@@ -16,4 +16,4 @@ module.exports = {
       globalToGuild: process.env.DEVELOPMENT_GUILD_ID
     }
   }
-}
+};
