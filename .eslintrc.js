@@ -33,5 +33,13 @@ module.exports = {
       }
     ],
     'spaced-comment': 'warn'
-  }
+  },
+  overrides: [
+    {
+      files: ['slash-up.config.js'],
+      env: {
+        node: true
+      }
+    }
+  ]
 };

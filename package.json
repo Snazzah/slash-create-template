@@ -4,6 +4,8 @@
   "description": "A template for slash-create",
   "main": "dist/index.js",
   "scripts": {
+    "sync": "slash-up sync",
+    "sync:dev": "slash-up sync -e development",
     "start": "cd dist && node index.js",
     "build": "npx tsc",
     "lint": "npx eslint --ext .ts ./src",
@@ -24,6 +26,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.3.0",
     "prettier": "^2.2.1",
+    "slash-up": "^1.0.3",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   }
