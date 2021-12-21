@@ -4,6 +4,8 @@
   "description": "A template for slash-create",
   "main": "src/index.js",
   "scripts": {
+    "sync": "slash-up sync",
+    "sync:dev": "slash-up sync -e development",
     "start": "node src/index.js"
   },
   "dependencies": {
@@ -16,6 +18,7 @@
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.3.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "slash-up": "^1.0.3"
   }
 }

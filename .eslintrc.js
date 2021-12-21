@@ -18,5 +18,13 @@ module.exports = {
     'no-empty': ['error', { allowEmptyCatch: true }],
     'prefer-const': ['warn', { destructuring: 'all' }],
     'spaced-comment': 'warn'
-  }
+  },
+  overrides: [
+    {
+      files: ['slash-up.config.js'],
+      env: {
+        node: true
+      }
+    }
+  ]
 };

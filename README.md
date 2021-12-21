@@ -3,11 +3,9 @@ This templates helps you in creating slash commands from a webserver.
 
 ## Installation
 ```sh
-npx degit Snazzah/slash-create-template slash-commands
+npx slash-up init js slash-commands
 cd slash-commands
-npm i -g yarn
-yarn
-cp .env.example .env # this copies the .env file, edit variables in this file!
+# this edit variables in the ".env" file!
 # Create and edit commands in the `commands` folder
 yarn start
 ```
