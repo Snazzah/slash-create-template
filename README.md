@@ -16,6 +16,11 @@ slash-up sync
 yarn start
 ```
 
+### From Railway/Heroku
+For Railway and Heroku users, you must sync commands locally to push any command changes to Discord. You can do this by using `slash-up sync` within your Git repository.
+
+Heroku users will have their commands synced when they initially deploy to Heroku.
+
 ### Using PM2
 ```sh
 npm i -g pm2
