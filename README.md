@@ -12,7 +12,7 @@ npx slash-up init js slash-commands
 cd slash-commands
 # this edit variables in the ".env" file!
 # Create and edit commands in the `commands` folder
-slash-up sync
+npx slash-up sync
 yarn start
 ```
 
