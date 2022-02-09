@@ -10,7 +10,7 @@ npx slash-up init typescript slash-commands
 cd slash-commands
 # edit variables in the ".env" file!
 # Create and edit commands in the `commands` folder
-slash-up sync
+npx slash-up sync
 yarn build
 yarn start
 ```
