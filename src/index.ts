@@ -13,7 +13,7 @@ const creator = new SlashCreator({
   applicationID: process.env.DISCORD_APP_ID,
   publicKey: process.env.DISCORD_PUBLIC_KEY,
   token: process.env.DISCORD_BOT_TOKEN,
-  serverPort: 8020
+  serverPort: parseInt(process.env.PORT, 10) || 8020
 });
 
 creator.on('debug', (message) => logger.log(message));
@@ -29,7 +29,6 @@ creator.on('commandError', (command, error) => logger.error(`Command ${command.c
 creator
   .withServer(new FastifyServer())
   .registerCommandsIn(path.join(__dirname, 'commands'))
-  .syncCommands()
   .startServer();
 
-// This should serve in localhost:8020/interactions
+console.log(`Starting server at "localhost:${creator.options.serverPort}/interactions"`);
