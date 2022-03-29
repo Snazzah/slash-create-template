@@ -7,7 +7,7 @@
     "sync": "slash-up sync",
     "sync:dev": "slash-up sync -e development",
     "start": "node src/index.js",
-     "test": "mocha \"./src/commands/*.js\" "
+     "test": "mocha \"./src/commands/*.js\" --exit "
   },
   "dependencies": {
     "cat-loggr": "^1.1.0",
